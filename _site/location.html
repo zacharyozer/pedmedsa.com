@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title> Pediatric Medicine, PA</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+<div id="holder">
+<div id="wrapper">
+<div id="header">
+<div style="float:left; padding-top:5px;"> <a href="index.html"><img src="images/pedmed.png" /></a> </div>
+<div class="navigation"><a href="appointments.html" class="nav">appointments</a>&nbsp;|&nbsp;<a href="forms.html" class="nav">forms</a>&nbsp;|&nbsp;<a href="doctors.html" class="nav">doctors</a>&nbsp;|&nbsp;<a href="location.html" class="nav">location and hours</a></div>
+<br style="clear:both" />
+</div>
+<div class="hr"></div>
+<div id="content">
+<script type="text/javascript" src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAF6k2dpxquANpMY7oEvi8vxRImu0HtgUzQkZBkGdQlOzk9_5FgRSv6_0juyd1JBJ-hI9UCa83NyQTBg"></script>
+<div class="left_content">
+  <p><strong>Location<br />
+    </strong>South Texas Medical Plaza <br />
+	7922 Ewing Halsell Dr&nbsp;&nbsp;Ste 440 <br />
+  San Antonio&nbsp;&nbsp;TX 78229-3726</p>
+  <p><strong> Hours</strong><br />
+    Monday - Friday<br />
+    8:30 AM - 5 PM<br />
+  Saturday<br />
+  9 AM - 12 PM </p>
+  <p><strong>Contact</strong><br />
+    Phone: 210.614.2500<br />
+    Fax: 210.614.2755<br />
+    contact@pedmedsa.com</p>
+</div>
+<div class="right_content" id="map" style="height:300px"></div>
+<script type="text/javascript">
+if (GBrowserIsCompatible()) {
+	var map = new GMap2(document.getElementById("map"));
+	map.addControl(new GLargeMapControl())
+	var address = "7922 EWING HALSELL DR, SAN ANTONIO, TX, 78229-3726 ";
+	geocoder = new GClientGeocoder();
+	if (geocoder) {
+		geocoder.getLatLng(
+		address, function(point) {
+			if (!point) {
+				alert(address + " not found");
+			} else {
+				map.setCenter(point, 15);
+				var marker = new GMarker(point);
+				map.addOverlay(marker);
+				marker.openInfoWindowHtml("<strong>Pediatric Medicine, PA</strong><br/>7922 Ewing Halsell Dr<br />Ste 440<br />San Antonio  TX 78229-3726");
+			}
+		});
+	}
+}
+</script>
+<br style="clear:both" />
+</div>
+<div class="hr"></div>
+<div>
+<div style="float:left">7922 Ewing Halsell Dr  &bull; Ste 440 &bull; San Antonio&nbsp;&nbsp;TX 78229-3726</div>
+<div style="float:right">p: 210.614.2500 | f: 210.614.2755 | <a href="contact.html">Contact Us</a></div>
+</div>
+<br style="clear:both" />
+</div>
+</div>
+<div class="footer">&copy; 2008 - <script type="text/javascript">document.write((new Date()).getFullYear());</script> Pediatric Medicine, PA</div>
+</body>
+</html>
